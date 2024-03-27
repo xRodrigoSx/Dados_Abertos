@@ -19,10 +19,10 @@ class Governo(scrapy.Spider):
 
             dados.append(dado)
 
+            print("Total de dados: ", len(dados))
+            
 #            driver = webdriver.Chrome()
 #            driver.get("https://dados.gov.br/dados/conjuntos-dados")
-
-            print("Total de dados: ", len(dados))
         
 #            pagina_pulada = pular_pagina(driver)
 
