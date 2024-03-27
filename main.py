@@ -19,24 +19,24 @@ class Governo(scrapy.Spider):
 
             dados.append(dado)
 
-            driver = webdriver.Chrome()
+#            driver = webdriver.Chrome()
+#            driver.get("https://dados.gov.br/dados/conjuntos-dados")
 
-            driver.get("https://dados.gov.br/dados/conjuntos-dados")
-
-            pagina_pulada = pular_pagina(driver)
-
-            if pagina_pulada:
-                print("Página pulada com sucesso!")
-            else:
-                print("Erro ao pular página.")
-
-        print("Total de dados: ", len(dados))
+            print("Total de dados: ", len(dados))
         
-        def pular_pagina(driver):
-            try:
-                proxima_pagina = driver.find_element(By.CSS_SELECTOR, "a.next-page")
-                proxima_pagina.click()
-                return True
-            except:
-                return False
+#            pagina_pulada = pular_pagina(driver)
+
+#            if pagina_pulada:
+#                print("Página pulada com sucesso!")
+#            else:
+#                print("Erro ao pular página.")
+
+        
+#        def pular_pagina(driver):
+#            try:
+#                proxima_pagina = driver.find_element(By.CSS_SELECTOR, "a.next-page")
+#                proxima_pagina.click()
+#                return True
+#            except:
+#                return False
         
