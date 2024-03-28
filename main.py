@@ -10,13 +10,13 @@ class Governo(scrapy.Spider):
     start_urls = ["https://dados.gov.br/dados/conjuntos-dados"]
 
     def parse(self, response):
-        SELETOR = ".wrapper"
-        SELETOR = ".search-result.container.my-2"
+        SELETOR = "div .wrapper"
+#        SELETOR = ".search-result.container.my-2"
         dados = []
         for categoria in response.css(SELETOR):
             dado = {}
 
-            NOME_SELETOR = ".capitalize.search-result-title.text-base.text-gray-900::text"
+            NOME_SELETOR = "h3 .capitalize.search-result-title.text-base.text-gray-900::text"
 
             dado['nome'] = categoria.css(NOME_SELETOR).extract_first()
             print(dado)
